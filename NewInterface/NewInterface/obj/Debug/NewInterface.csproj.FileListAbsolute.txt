@@ -1,0 +1,14 @@
+C:\Users\sibon\source\repos\NewInterface\NewInterface\bin\Debug\NewInterface.exe.config
+C:\Users\sibon\source\repos\NewInterface\NewInterface\bin\Debug\NewInterface.exe
+C:\Users\sibon\source\repos\NewInterface\NewInterface\bin\Debug\NewInterface.pdb
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.csproj.AssemblyReference.cache
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.LoginPage.resources
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.Properties.Resources.resources
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.csproj.GenerateResource.cache
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.csproj.CoreCompileInputs.cache
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.exe
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.pdb
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.MainForm.resources
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.Calender.resources
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.UserControlBlank.resources
+C:\Users\sibon\source\repos\NewInterface\NewInterface\obj\Debug\NewInterface.UserControlDays.resources
