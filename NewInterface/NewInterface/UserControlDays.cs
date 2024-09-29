@@ -25,5 +25,12 @@ namespace NewInterface
         {
             lblDays.Text = numday + "";
         }
+
+        private void UserControlDays_Click(object sender, EventArgs e)
+        {
+            EventForm eventForm = new EventForm();
+
+            eventForm.Show();
+        }
     }
 }

@@ -293,6 +293,7 @@
             this.calender1.Name = "calender1";
             this.calender1.Size = new System.Drawing.Size(640, 494);
             this.calender1.TabIndex = 4;
+            this.calender1.Load += new System.EventHandler(this.calender1_Load);
             // 
             // MainForm
             // 

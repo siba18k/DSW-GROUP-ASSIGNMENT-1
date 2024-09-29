@@ -56,6 +56,7 @@
             this.lblExit.Size = new System.Drawing.Size(37, 21);
             this.lblExit.TabIndex = 18;
             this.lblExit.Text = "Exit";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // lblClear
             // 
@@ -94,6 +95,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(212, 29);
             this.txtUsername.TabIndex = 16;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnLogin
             // 
@@ -195,6 +197,7 @@
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
