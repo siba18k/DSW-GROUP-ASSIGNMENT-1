@@ -291,7 +291,7 @@
             this.calender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.calender1.Location = new System.Drawing.Point(194, 0);
             this.calender1.Name = "calender1";
-            this.calender1.Size = new System.Drawing.Size(640, 494);
+            this.calender1.Size = new System.Drawing.Size(649, 494);
             this.calender1.TabIndex = 4;
             this.calender1.Load += new System.EventHandler(this.calender1_Load);
             // 

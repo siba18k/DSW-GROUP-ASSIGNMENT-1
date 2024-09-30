@@ -8,63 +8,98 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NewInterface
 {
     public partial class LoginPage : Form
     {
-
         public LoginPage()
         {
             InitializeComponent();
         }
 
+        private void pnlLine1_Paint(object sender, PaintEventArgs e)
+        {
+        
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
+
+        }
+
+        private void SignupForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string enteredUsername = txtUsername.Text;
+            string enteredPassword = txtPassword1.Text;
 
             try
             {
-                // Specify the file path where you want to save the data
-                string filePath = @"C:\Users\MPHO\Desktop\DSW-GROUP-ASSIGNMENT-1-main\NewInterface\UserAccount.txt";
+                // Get the path to the user's Desktop where the file is saved
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string folderName = "DSW-GROUP-ASSIGNMENT-1-main";
+                string fileName = "UserAccount.txt";
 
-                // Save username and password to the file
-                using (StreamWriter writer = new StreamWriter(filePath, true)) // 'true' to append data
+                // Combine the folder path with the file name
+                string filePath = Path.Combine(desktopPath, folderName, fileName);
+
+                // Read the file and check if the entered username and password match
+                if (File.Exists(filePath))
                 {
-                    writer.WriteLine("Username: " + username);
-                    writer.WriteLine("Password: " + password);
-                    writer.WriteLine(); // Add a blank line for readability
+                    // Read all lines from the file
+                    string[] lines = File.ReadAllLines(filePath);
+
+                    string savedUsername = null;
+                    string savedPassword = null;
+                    bool credentialsMatch = false;
+
+                    // Loop through the lines to find matching username and password
+                    for (int i = 0; i < lines.Length; i++)
+                    {
+                        if (lines[i].StartsWith("Username:"))
+                        {
+                            savedUsername = lines[i].Split(':')[1].Trim(); // Get the username
+                        }
+                        else if (lines[i].StartsWith("Password:"))
+                        {
+                            savedPassword = lines[i].Split(':')[1].Trim(); // Get the password
+
+                            // Now that we have both username and password, we can check if they match
+                            if (enteredUsername == savedUsername && enteredPassword == savedPassword)
+                            {
+                                credentialsMatch = true;
+                                break; // Stop searching once we find a match
+                            }
+                        }
+                    }
+
+                    if (credentialsMatch)
+                    {
+                        // Open MainForm if the login is successful
+                        MainForm mainForm = new MainForm();
+                        mainForm.Show();
+                        this.Hide(); // Hide the LoginPage
+                    }
+                    else
+                    {
+                        // Show error if the credentials don't match
+                        MessageBox.Show("Invalid username or password.");
+                    }
                 }
-
-                // Hide the login page and show the main form
-                LoginPage loginPage = new LoginPage();
-                MainForm mainForm = new MainForm();
-                loginPage.Hide();
-                mainForm.Show();
-
-                
+                else
+                {
+                    MessageBox.Show("User account file not found.");
+                }
             }
-            
             catch (Exception ex)
             {
-               
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
-        }
-    
-
-
-
-
-    private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginPage_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void lblExit_Click(object sender, EventArgs e)
