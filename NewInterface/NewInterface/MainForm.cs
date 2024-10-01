@@ -93,5 +93,17 @@ namespace NewInterface
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            // Create an instance of the SignupPage form
+            SignupPage signupPage = new SignupPage();
+
+            // Show the SignupPage form
+            signupPage.Show();
+
+            // Hide the current form (this form)
+            this.Hide();
+        }
     }
 }

@@ -34,12 +34,13 @@
             this.pnlLine1 = new System.Windows.Forms.Panel();
             this.pbPassword = new System.Windows.Forms.PictureBox();
             this.pnlLine2 = new System.Windows.Forms.Panel();
-            this.lblClear = new System.Windows.Forms.Label();
             this.lblExit = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
@@ -97,24 +98,12 @@
             this.pnlLine2.Size = new System.Drawing.Size(275, 1);
             this.pnlLine2.TabIndex = 16;
             // 
-            // lblClear
-            // 
-            this.lblClear.AutoSize = true;
-            this.lblClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClear.ForeColor = System.Drawing.Color.White;
-            this.lblClear.Location = new System.Drawing.Point(221, 395);
-            this.lblClear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblClear.Name = "lblClear";
-            this.lblClear.Size = new System.Drawing.Size(97, 21);
-            this.lblClear.TabIndex = 18;
-            this.lblClear.Text = "Clear Fields";
-            // 
             // lblExit
             // 
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.White;
-            this.lblExit.Location = new System.Drawing.Point(174, 484);
+            this.lblExit.Location = new System.Drawing.Point(165, 482);
             this.lblExit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(37, 21);
@@ -134,19 +123,20 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(212, 29);
             this.txtUsername.TabIndex = 21;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
-            // txtPassword1
+            // txtPassword
             // 
-            this.txtPassword1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.txtPassword1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword1.ForeColor = System.Drawing.Color.White;
-            this.txtPassword1.Location = new System.Drawing.Point(91, 351);
-            this.txtPassword1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPassword1.Multiline = true;
-            this.txtPassword1.Name = "txtPassword1";
-            this.txtPassword1.Size = new System.Drawing.Size(212, 29);
-            this.txtPassword1.TabIndex = 22;
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.Location = new System.Drawing.Point(91, 351);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(212, 29);
+            this.txtPassword.TabIndex = 22;
             // 
             // button1
             // 
@@ -155,10 +145,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(124, 420);
+            this.button1.Location = new System.Drawing.Point(45, 434);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 42);
+            this.button1.Size = new System.Drawing.Size(65, 42);
             this.button1.TabIndex = 23;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
@@ -176,18 +166,51 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Login";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(210, 447);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 42);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Delete User";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(210, 397);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(110, 42);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Clear Fields";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(375, 512);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtPassword1);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblExit);
-            this.Controls.Add(this.lblClear);
             this.Controls.Add(this.pnlLine2);
             this.Controls.Add(this.pbPassword);
             this.Controls.Add(this.pnlLine1);
@@ -214,11 +237,12 @@
         private System.Windows.Forms.Panel pnlLine1;
         private System.Windows.Forms.PictureBox pbPassword;
         private System.Windows.Forms.Panel pnlLine2;
-        private System.Windows.Forms.Label lblClear;
         private System.Windows.Forms.Label lblExit;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword1;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

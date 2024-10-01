@@ -37,8 +37,6 @@
             this.homeContainer = new System.Windows.Forms.Panel();
             this.pnlCalender = new System.Windows.Forms.Panel();
             this.btnCalender = new System.Windows.Forms.Button();
-            this.pnlProfile = new System.Windows.Forms.Panel();
-            this.btnProfile = new System.Windows.Forms.Button();
             this.pnlHome = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlSettings = new System.Windows.Forms.Panel();
@@ -49,17 +47,22 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.homeTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.calender1 = new NewInterface.Calender();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.pnlProfile = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             this.homeContainer.SuspendLayout();
             this.pnlCalender.SuspendLayout();
-            this.pnlProfile.SuspendLayout();
             this.pnlHome.SuspendLayout();
             this.pnlSettings.SuspendLayout();
             this.pnlHelp.SuspendLayout();
             this.pnlAbout.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -70,6 +73,7 @@
             this.sidebar.Controls.Add(this.pnlSettings);
             this.sidebar.Controls.Add(this.pnlHelp);
             this.sidebar.Controls.Add(this.pnlAbout);
+            this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.MaximumSize = new System.Drawing.Size(200, 494);
@@ -147,32 +151,6 @@
             this.btnCalender.Text = "Calender";
             this.btnCalender.UseVisualStyleBackColor = false;
             this.btnCalender.Click += new System.EventHandler(this.btnCalender_Click);
-            // 
-            // pnlProfile
-            // 
-            this.pnlProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(60)))));
-            this.pnlProfile.Controls.Add(this.btnProfile);
-            this.pnlProfile.Location = new System.Drawing.Point(0, 44);
-            this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(197, 45);
-            this.pnlProfile.TabIndex = 2;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(60)))));
-            this.btnProfile.FlatAppearance.BorderSize = 0;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
-            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(12, 3);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.btnProfile.Size = new System.Drawing.Size(173, 38);
-            this.btnProfile.TabIndex = 1;
-            this.btnProfile.Text = "    Profile";
-            this.btnProfile.UseVisualStyleBackColor = false;
             // 
             // pnlHome
             // 
@@ -286,6 +264,14 @@
             this.homeTimer.Interval = 10;
             this.homeTimer.Tick += new System.EventHandler(this.homeTimer_Tick);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(3, 287);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(197, 45);
+            this.panel2.TabIndex = 4;
+            // 
             // calender1
             // 
             this.calender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -294,6 +280,49 @@
             this.calender1.Size = new System.Drawing.Size(649, 494);
             this.calender1.TabIndex = 4;
             this.calender1.Load += new System.EventHandler(this.calender1_Load);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(60)))));
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.White;
+            this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(12, 3);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnProfile.Size = new System.Drawing.Size(173, 38);
+            this.btnProfile.TabIndex = 1;
+            this.btnProfile.Text = "    Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            // 
+            // pnlProfile
+            // 
+            this.pnlProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(60)))));
+            this.pnlProfile.Controls.Add(this.btnProfile);
+            this.pnlProfile.Location = new System.Drawing.Point(0, 44);
+            this.pnlProfile.Name = "pnlProfile";
+            this.pnlProfile.Size = new System.Drawing.Size(197, 45);
+            this.pnlProfile.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 3);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(173, 39);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // MainForm
             // 
@@ -313,11 +342,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
             this.homeContainer.ResumeLayout(false);
             this.pnlCalender.ResumeLayout(false);
-            this.pnlProfile.ResumeLayout(false);
             this.pnlHome.ResumeLayout(false);
             this.pnlSettings.ResumeLayout(false);
             this.pnlHelp.ResumeLayout(false);
             this.pnlAbout.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.pnlProfile.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -338,11 +368,13 @@
         private System.Windows.Forms.PictureBox pbMenu;
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Panel homeContainer;
-        private System.Windows.Forms.Panel pnlProfile;
-        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Panel pnlCalender;
         private System.Windows.Forms.Button btnCalender;
         private System.Windows.Forms.Timer homeTimer;
         private Calender calender1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlProfile;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button button1;
     }
 }
