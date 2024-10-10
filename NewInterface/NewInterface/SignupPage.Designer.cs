@@ -51,10 +51,10 @@
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.White;
-            this.lblExit.Location = new System.Drawing.Point(171, 487);
-            this.lblExit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblExit.Location = new System.Drawing.Point(207, 584);
+            this.lblExit.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(37, 21);
+            this.lblExit.Size = new System.Drawing.Size(41, 23);
             this.lblExit.TabIndex = 18;
             this.lblExit.Text = "Exit";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
@@ -65,11 +65,11 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(91, 351);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(119, 390);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(212, 29);
+            this.txtPassword.Size = new System.Drawing.Size(283, 36);
             this.txtPassword.TabIndex = 15;
             // 
             // txtUsername
@@ -78,37 +78,38 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(81, 258);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Location = new System.Drawing.Point(107, 292);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(212, 29);
+            this.txtUsername.Size = new System.Drawing.Size(283, 36);
             this.txtUsername.TabIndex = 16;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // pnlLine2
             // 
             this.pnlLine2.BackColor = System.Drawing.Color.White;
-            this.pnlLine2.Location = new System.Drawing.Point(45, 388);
-            this.pnlLine2.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlLine2.Location = new System.Drawing.Point(60, 438);
+            this.pnlLine2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pnlLine2.Name = "pnlLine2";
-            this.pnlLine2.Size = new System.Drawing.Size(275, 1);
+            this.pnlLine2.Size = new System.Drawing.Size(367, 1);
             this.pnlLine2.TabIndex = 12;
             // 
             // pnlLine1
             // 
             this.pnlLine1.BackColor = System.Drawing.Color.White;
-            this.pnlLine1.Location = new System.Drawing.Point(45, 295);
-            this.pnlLine1.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlLine1.Location = new System.Drawing.Point(60, 338);
+            this.pnlLine1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pnlLine1.Name = "pnlLine1";
-            this.pnlLine1.Size = new System.Drawing.Size(275, 1);
+            this.pnlLine1.Size = new System.Drawing.Size(367, 1);
             this.pnlLine1.TabIndex = 13;
+            this.pnlLine1.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLine1_Paint);
             // 
             // pbPassword
             // 
             this.pbPassword.Image = ((System.Drawing.Image)(resources.GetObject("pbPassword.Image")));
-            this.pbPassword.Location = new System.Drawing.Point(45, 342);
-            this.pbPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.pbPassword.Location = new System.Drawing.Point(60, 390);
+            this.pbPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pbPassword.Name = "pbPassword";
             this.pbPassword.Size = new System.Drawing.Size(38, 38);
             this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -118,8 +119,8 @@
             // pbUsername
             // 
             this.pbUsername.Image = ((System.Drawing.Image)(resources.GetObject("pbUsername.Image")));
-            this.pbUsername.Location = new System.Drawing.Point(45, 262);
-            this.pbUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.pbUsername.Location = new System.Drawing.Point(60, 303);
+            this.pbUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pbUsername.Name = "pbUsername";
             this.pbUsername.Size = new System.Drawing.Size(28, 25);
             this.pbUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -130,10 +131,10 @@
             // Logo
             // 
             this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(124, 46);
-            this.Logo.Margin = new System.Windows.Forms.Padding(4);
+            this.Logo.Location = new System.Drawing.Point(156, 56);
+            this.Logo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(125, 93);
+            this.Logo.Size = new System.Drawing.Size(167, 114);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 8;
             this.Logo.TabStop = false;
@@ -143,10 +144,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(117, 194);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(156, 205);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 39);
+            this.label1.Size = new System.Drawing.Size(167, 49);
             this.label1.TabIndex = 19;
             this.label1.Text = "Sign Up";
             // 
@@ -157,10 +158,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(45, 433);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(60, 524);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 42);
+            this.button1.Size = new System.Drawing.Size(107, 52);
             this.button1.TabIndex = 20;
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = false;
@@ -173,10 +174,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(175, 438);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(249, 524);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 42);
+            this.button2.Size = new System.Drawing.Size(193, 52);
             this.button2.TabIndex = 21;
             this.button2.Text = "Have Account";
             this.button2.UseVisualStyleBackColor = false;
@@ -189,10 +190,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(215, 397);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(287, 458);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 33);
+            this.button3.Size = new System.Drawing.Size(139, 35);
             this.button3.TabIndex = 22;
             this.button3.Text = "Clear Fields";
             this.button3.UseVisualStyleBackColor = false;
@@ -200,10 +201,10 @@
             // 
             // SignupPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(375, 512);
+            this.ClientSize = new System.Drawing.Size(500, 630);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -217,6 +218,7 @@
             this.Controls.Add(this.pbUsername);
             this.Controls.Add(this.Logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SignupPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

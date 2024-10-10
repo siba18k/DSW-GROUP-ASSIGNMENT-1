@@ -198,5 +198,10 @@ namespace NewInterface
         {
 
         }
+
+        private void Logo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

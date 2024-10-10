@@ -15,7 +15,7 @@ namespace NewInterface
     {
         bool sidebarExpand;
         bool homeCollapse;
-                public MainForm()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -73,11 +73,25 @@ namespace NewInterface
         {
             homeTimer.Start();
         }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+
+            using (var optionsForm = new ScheduleOptionsForm())
+            {
+                DialogResult result = optionsForm.ShowDialog(this);
+
+                // Check the result to determine the user's choice
+                if (result == DialogResult.Yes)
+                {
+                    // Code for "Add to Schedule" action
+                }
+                else if (result == DialogResult.No)
+                {
+                    // Code for "View Schedule" action
+                }
+            }
         }
+
 
         private void btnCalender_Click(object sender, EventArgs e)
         {
@@ -86,7 +100,7 @@ namespace NewInterface
 
         private void calender1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,14 +110,17 @@ namespace NewInterface
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // Create an instance of the SignupPage form
+            
             SignupPage signupPage = new SignupPage();
 
-            // Show the SignupPage form
+            
             signupPage.Show();
 
-            // Hide the current form (this form)
+            
             this.Hide();
         }
+
+        
+
     }
 }

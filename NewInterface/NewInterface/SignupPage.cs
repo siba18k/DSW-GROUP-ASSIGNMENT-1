@@ -158,5 +158,10 @@ namespace NewInterface
             txtUsername.Text = "";
             txtPassword.Text = "";
         }
+
+        private void pnlLine1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

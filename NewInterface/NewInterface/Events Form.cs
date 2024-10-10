@@ -9,37 +9,50 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace NewInterface
 {
     public partial class EventForm : Form
     {
         private Dictionary<DateTime, List<string>> events;
+
         public EventForm()
         {
             InitializeComponent();
             LoadEvents();
         }
+
         private void LoadEvents()
         {
-
             events = new Dictionary<DateTime, List<string>>();
 
-            if (File.Exists("events.txt"))
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "events.txt");
+
+            if (File.Exists(filePath))
             {
-                var lines = File.ReadAllLines("events.txt");
+                var lines = File.ReadAllLines(filePath);
                 foreach (var line in lines)
                 {
                     var parts = line.Split(new[] { " - " }, StringSplitOptions.None);
                     if (parts.Length == 2)
                     {
-                        DateTime date = DateTime.Parse(parts[0]);
+                        // Declare description here
                         string description = parts[1];
 
-                        if (!events.ContainsKey(date))
+                        // Use TryParse to validate the date
+                        if (DateTime.TryParse(parts[0], out DateTime date))
                         {
-                            events[date] = new List<string>();
+                            if (!events.ContainsKey(date))
+                            {
+                                events[date] = new List<string>();
+                            }
+                            events[date].Add(description);
                         }
-                        events[date].Add(description);
+                        else
+                        {
+                            // Inform the user about the incorrect date format
+                            MessageBox.Show($"Invalid date format in events file: {parts[0]}", "Error");
+                        }
                     }
                 }
             }
@@ -63,23 +76,31 @@ namespace NewInterface
 
         private void Eventsavebtn_Click(object sender, EventArgs e)
         {
+            string eventDescription = Addeventtxt.Text;
+            DateTime eventDate = dateTimePicker.Value;
+            string eventDetails = $"{eventDate.ToShortDateString()} - {eventDescription}";
+
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "events.txt");
+            File.AppendAllText(filePath, eventDetails + Environment.NewLine);
+
+            // Update events dictionary
+            if (!events.ContainsKey(eventDate))
             {
-                string eventDescription = Addeventtxt.Text;
-                DateTime eventDate = dateTimePicker.Value;
-                string eventDetails = $"{eventDate.ToShortDateString()} - {eventDescription}";
-
-                // Save to text file
-                File.AppendAllText("events.txt", eventDetails + Environment.NewLine);
-
-                // Update events dictionary
-                if (!events.ContainsKey(eventDate))
-                {
-                    events[eventDate] = new List<string>();
-                }
-                events[eventDate].Add(eventDescription);
-
-                MessageBox.Show("Event saved successfully!");
+                events[eventDate] = new List<string>();
             }
+            events[eventDate].Add(eventDescription);
+
+            MessageBox.Show("Event saved successfully!");
+        }
+
+        private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            // You can implement any actions needed when the month calendar changes here
+        }
+
+        private void Addeventtxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
